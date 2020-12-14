@@ -5,8 +5,10 @@ import NotFound from './components/NotFound';
 import Layout from './components/Layout';
 import { Provider } from 'react-redux';
 import store from './redux/store';
-import { initial } from './redux/actions/ShopAction';
+import { initial, intitialType, intitialColor } from './redux/actions/ShopAction';
 
+store.dispatch(intitialColor());
+store.dispatch(intitialType());
 store.dispatch(initial());
 
 function App() {

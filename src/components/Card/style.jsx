@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import { QUATERNARY, PRIMARY } from '../Style';
 
 export const Button = styled.button ` 
-  width: 350px;
-  height: 400px;
+  width: 150px;
+  height: 200px;
   border: 1px solid ${PRIMARY};
   border-radius: 10px;
   margin: 10px;
@@ -15,7 +15,7 @@ export const Button = styled.button `
     outline: none;
   }
   img {
-    height: 300px;
+    height: 100px;
   }
   p {
     font-family: 'Roboto', sans-serif;

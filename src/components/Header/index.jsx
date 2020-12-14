@@ -1,12 +1,16 @@
 import React from 'react';
+// import { useDispatch } from 'react-redux';
+// import { handleChange } from '../../redux/actions/ShopAction';
 import { Head } from './style';
 import { getImg } from '../Images';
 
-const handleChange = (e) => {
-  console.log(e.target.value);
-}
-
 const Header = () => {
+
+  // const dispatch = useDispatch();
+
+  const handleChange = (e) => {
+    console.log(e.target.value);
+  }
 
   return (
     <Head>

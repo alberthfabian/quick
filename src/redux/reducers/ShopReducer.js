@@ -1,9 +1,5 @@
-// const { WATCH_MOVIE } = require("../actions/ShopAction");
-// const { MODAL } = require("../actions/ShopAction");
-const { MORE } = require("../actions/ShopAction");
-const { INITIAL } = require("../actions/ShopAction");
+const { TYPE, COLOR, MORE, INITIAL, MODAL, CONSOLIDATED, RESET, OPEN, INFO, DATA } = require("../actions/ShopAction");
 
-// let pokemon = JSON.parse(localStorage.getItem('pokemon'));
 let value = 0;
 
 const shop = (state = [], action) => {
@@ -14,6 +10,12 @@ const shop = (state = [], action) => {
         pokemon: action.payload,
       }
     }
+    case CONSOLIDATED: {
+      return {
+        ...state,
+        consolidated: action.payload,
+      }
+    }
     case MORE: { 
       value = value + action.payload
       return {
@@ -21,12 +23,48 @@ const shop = (state = [], action) => {
         more: value,
       }
     }
-    // case MODAL: {
-    //   return {
-    //     ...state,
-    //     modal: action.payload
-    //   }
-    // }
+    case TYPE: { 
+      return {
+        ...state,
+        type: action.payload,
+      }
+    }
+    case COLOR: { 
+      return {
+        ...state,
+        color: action.payload,
+      }
+    }
+    case MODAL: {
+      return {
+        ...state,
+        modal: action.payload
+      }
+    }
+    case OPEN: {
+      return {
+        ...state,
+        open: action.payload
+      }
+    }
+    case RESET: {
+      return {
+        ...state,
+        reset: action.payload
+      }
+    }
+    case INFO: {
+      return {
+        ...state,
+        info: action.payload
+      }
+    }
+    case DATA : {
+      return {
+        ...state,
+        data: action.payload
+      }
+    }
     default: return state;
   }
 }

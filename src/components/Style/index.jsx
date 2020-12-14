@@ -16,6 +16,7 @@ export const PRIMARY = '#1E90FF';
 export const SECONDARY = '#f2f2f2';
 export const TERTIARY = '#111111';
 export const QUATERNARY = '#B0E0E6';
+export const FIFTH = '#d42828';
 
 export const device = {
   mobileS: `(min-width: ${size.mobileS})`,

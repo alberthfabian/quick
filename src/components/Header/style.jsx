@@ -21,7 +21,7 @@ export const Head = styled.section `
       border-radius: 10px;
       padding-left: 30px;
       @media ${device.mobileM} {
-        width: 300px;
+        width: 200px;
       }
       :focus {
         outline: none;
